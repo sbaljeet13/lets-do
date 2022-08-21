@@ -1,8 +1,13 @@
 import './App.css';
+import Form from './Form';
+import Header from './Header';
 
-function App() {
+function App() {  
   return (
-    <p>Hello World!</p>
+    <div>
+      <Header />
+      <Form />
+    </div>
   );
 }
 
