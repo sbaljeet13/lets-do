@@ -1,0 +1,10 @@
+.input-box {
+    margin: 1rem;
+}
+
+.add-button {
+    background: greenyellow;
+    border-radius: 1rem;
+    border-style: solid;
+    margin: 1rem;
+}

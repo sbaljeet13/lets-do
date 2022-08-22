@@ -1,10 +1,10 @@
-function Form() {
+import './Form.css'
+
+export default function Form({ newTask, onChange, onClick }) {
     return (
-        <form>
-            <input></input>
-            <button>Add</button>
-        </form>
+        <div>
+            <input value={newTask} onChange={onChange} type='text' className='input-box' placeholder='Add task' />
+            <button className='add-button' onClick={onClick}>Add</button>
+        </div>
     );
 }
-
-export default Form;
