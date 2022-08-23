@@ -1,3 +1,14 @@
+# App Design
+
+## Components
+
+- Lets Do App
+    - props
+        - tasks
+    - New Task Form
+    - Task List
+        -Task
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

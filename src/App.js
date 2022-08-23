@@ -12,22 +12,19 @@ export default function App() {
 
   const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState("");
-  const [id, setId] = useState(1);
+  const [id, setId] = useState(0);
 
-  function onInputChange(event) {
-      setNewTask(event.target.value);
-  }
-
-  function onClickAddBtn() {
-    tasks.push({ id: id, title:newTask});
+  function addTask() {
+    tasks.push({ id: id, title: newTask, isComplete: false });
     setId(id + 1);
+    setNewTask('');
     setTasks(tasks);
   }
 
   return (
     <div>
       <Header />
-      <Form newTask={newTask} onClick={onClickAddBtn} onChange={onInputChange} />
+      <Form newTask={newTask} onTextChange={setNewTask} onClick={addTask} />
       <TaskList tasks={tasks} />
     </div>
   );

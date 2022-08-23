@@ -1,8 +1,15 @@
-export default function TaskList({tasks}) {
+import Task from './Task'
 
-    const taskList = tasks.map(
-        task => <li key={task.id}>{task.title}</li>
-    );
+export default function TaskList({ tasks }) {
+
+    const taskList = tasks.map(task => {
+        return (
+            <Task 
+                id={task.id}
+                title={task.title}
+                isComplete={task.isComplete} />
+        )
+    });
     
     return (
         <ul>{taskList}</ul>
