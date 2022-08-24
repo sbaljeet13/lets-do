@@ -2,12 +2,12 @@ import Task from './Task'
 
 export default function TaskList({ tasks }) {
 
-    const taskList = tasks.map(task => {
+    const taskList = tasks.map(t => {
         return (
             <Task 
-                id={task.id}
-                title={task.title}
-                isComplete={task.isComplete} />
+                key={t.id}
+                title={t.title}
+                isComplete={t.isComplete} />
         )
     });
     
