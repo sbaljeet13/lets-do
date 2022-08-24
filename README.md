@@ -7,7 +7,7 @@
         - tasks
     - New Task Form
     - Task List
-        -Task
+        - Task
 
 # Getting Started with Create React App
 
