@@ -1,20 +1,19 @@
 import { useState } from 'react';
 import './Task.css'
 
-export default function Task({id, title, isComplete}) {
-    
+export default function Task({id, title, isComplete, handleDeleteClick }) {
+
     const [complete, setComplete] = useState(isComplete);
 
-    function handleClick(e) {
-        setComplete(!complete);
-    }
-
     return (
-        <li
-            key={id}
-            className={ complete ? 'complete' : 'incomplete' }
-            onClick={handleClick}>
-            {title}
+        <li key={id}>
+            <span
+                className={ complete ? 'complete' : 'incomplete' }
+                onClick={() => setComplete(!complete)}>
+                {title}
+            </span>
+            
+            <button onClick={handleDeleteClick}>x</button>
         </li>
     );
 }

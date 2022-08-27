@@ -15,17 +15,22 @@ export default function App() {
   const [id, setId] = useState(0);
 
   function addTask() {
-    tasks.push({ id: id, title: newTask, isComplete: false });
+    setTasks([...tasks, { id: id, title: newTask, isComplete: false }]);
     setId(id + 1);
     setNewTask('');
-    setTasks(tasks);
+  }
+
+  function removeTask(key) {
+    const remainingTasks = tasks.filter(task => task.id !== key);
+    
+    setTasks(remainingTasks);
   }
 
   return (
     <div>
       <Header />
       <Form newTask={newTask} onTextChange={setNewTask} onClick={addTask} />
-      <TaskList tasks={tasks} />
+      <TaskList tasks={tasks} removeTask={(key) => removeTask(key)} />
     </div>
   );
 }
