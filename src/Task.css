@@ -1,7 +1,7 @@
 .complete {
-    text-decoration-line: line-through;
+    list-style-type: 'x   ';
 }
 
 .incomplete {
-    text-decoration-line: none;
+    list-style-type: disc;
 }

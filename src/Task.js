@@ -6,9 +6,9 @@ export default function Task({id, title, isComplete, handleDeleteClick }) {
     const [complete, setComplete] = useState(isComplete);
 
     return (
-        <li key={id}>
+        <li key={id}
+            className={ complete ? 'complete' : 'incomplete' }>
             <span
-                className={ complete ? 'complete' : 'incomplete' }
                 onClick={() => setComplete(!complete)}>
                 {title}
             </span>
