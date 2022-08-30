@@ -5,32 +5,32 @@ import TaskList from './TaskList';
 import { useState } from 'react';
 
 export default function App() {
-  // const tasks = [
-  //   {id: 1, title:"Grocery Shopping"},
-  //   {id: 2, title:"Cook Dinner"}
-  // ];
+  const exampleTasks = [
+    {id: 0, title:"Grocery Shopping", isComplete: true, isDeleted: false},
+    {id: 1, title:"Cook Dinner", isComplete: false, isDeleted: false}
+  ];
 
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(exampleTasks);
   const [newTask, setNewTask] = useState("");
-  const [id, setId] = useState(0);
+  const [id, setId] = useState(2);
 
   function addTask() {
-    setTasks([...tasks, { id: id, title: newTask, isComplete: false }]);
+    setTasks([...tasks, { 
+      id: id,  
+      title: newTask, 
+      isComplete: false, 
+      isDeleted: false 
+    }]);
+
     setId(id + 1);
     setNewTask('');
-  }
-
-  function removeTask(key) {
-    const remainingTasks = tasks.filter(task => task.id !== key);
-    
-    setTasks(remainingTasks);
   }
 
   return (
     <div>
       <Header />
       <Form newTask={newTask} onTextChange={setNewTask} onClick={addTask} />
-      <TaskList tasks={tasks} removeTask={(key) => removeTask(key)} />
+      <TaskList tasks={tasks} />
     </div>
   );
 }

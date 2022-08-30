@@ -1,6 +1,6 @@
 import Task from './Task'
 
-export default function TaskList({ tasks, removeTask }) {
+export default function TaskList({ tasks }) {
 
     const taskList = tasks.map(t => {
         return (
@@ -8,7 +8,7 @@ export default function TaskList({ tasks, removeTask }) {
                 key={t.id}
                 title={t.title}
                 isComplete={t.isComplete}
-                handleDeleteClick={() => removeTask(t.id)} />
+                isDeleted={t.isDeleted} />
         )
     });
     
