@@ -14,9 +14,8 @@ export default function Task({id, title, isComplete, isDeleted }) {
     }
 
     return (
-        <li key={id}
-            className={addClasses(complete, deleted)}>
-            <span
+        <li key={id}>
+            <span className={addClasses(complete, deleted)}
                 onClick={() => setComplete(!complete)}>
                 {title}
             </span>
