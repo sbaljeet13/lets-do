@@ -8,3 +8,7 @@
     border-style: solid;
     margin: 1rem;
 }
+
+form {
+    text-align: center;
+}

@@ -8,7 +8,7 @@ export default function Task({id, title, isComplete, isDeleted }) {
 
     function addClasses (complete, deleted) {
         let classes = complete ? ' complete ' : ' incomplete ';
-        classes += deleted ? ' deleted ' : ' not-deleted '
+        classes += deleted ? ' deleted ' : ' not-deleted ';
 
         return classes;
     }
