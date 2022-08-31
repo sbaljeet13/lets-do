@@ -1,12 +1,15 @@
 .input-box {
     margin: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
 }
 
 .add-button {
-    background: greenyellow;
-    border-radius: 1rem;
+    background: rgb(69, 193, 246);
+    border-radius: 0.5rem;
     border-style: solid;
     margin: 1rem;
+    padding: 0.5rem;
 }
 
 form {
