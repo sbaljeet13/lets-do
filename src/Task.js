@@ -6,10 +6,16 @@ export default function Task({id, title, isComplete, isDeleted }) {
     const [complete, setComplete] = useState(isComplete);
     const [deleted, setDeleted] = useState(isDeleted);
 
-    // set the isDeleted property 
+    function addClasses (complete, deleted) {
+        let classes = complete ? ' complete ' : ' incomplete ';
+        classes += deleted ? ' deleted ' : ' not-deleted '
+
+        return classes;
+    }
+
     return (
         <li key={id}
-            className={ complete ? 'complete' : 'incomplete' }>
+            className={addClasses(complete, deleted)}>
             <span
                 onClick={() => setComplete(!complete)}>
                 {title}

@@ -5,3 +5,11 @@
 .incomplete {
     list-style-type: disc;
 }
+
+.deleted {
+    text-decoration: line-through;
+}
+
+.not-deleted {
+    text-decoration: none;
+}
